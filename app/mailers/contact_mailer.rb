@@ -1,11 +1,15 @@
 class ContactMailer < ActionMailer::Base
     detault to: 'ngocordova@gmail.com'
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> contact_form
     def contact_email(name, email, body)
        @name = name
        @email = email
        @body = body
        
        mail(from: email, subject: 'Contact Form Message')
-   end
+    end
 end
