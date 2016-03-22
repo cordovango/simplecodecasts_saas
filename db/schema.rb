@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160322175902) do
+=======
+ActiveRecord::Schema.define(version: 20160314223743) do
+>>>>>>> ababf43ebcef098fa8bc704165302132fbc6d5dd
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -21,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160322175902) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "plans", force: true do |t|
     t.string   "name"
     t.decimal  "price"
@@ -48,4 +53,6 @@ ActiveRecord::Schema.define(version: 20160322175902) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
+=======
+>>>>>>> ababf43ebcef098fa8bc704165302132fbc6d5dd
 end
