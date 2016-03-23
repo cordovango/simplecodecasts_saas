@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
       customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
       self.stripe_customer_token = customer.id
       save!
+    else
+      resource.save
     end
   end
 end
