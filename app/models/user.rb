@@ -7,9 +7,9 @@ class User < ActiveRecord::Base
   has_one :profile
   attr_accessor :stripe_card_token
   
-  def save_with_payment
+  def save_with_payments
     if valid?
-      customer = Stripe::Customer.create(description: email, plan: plan_id, source: stripe_card_token)
+      customer = Stripe::Customer.create(description: email, plan: plan_id, card: stripe_card_token)
       self.stripe_customer_token = customer.id
       save!
     end
